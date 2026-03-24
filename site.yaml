@@ -7,7 +7,7 @@ meta:
   author: Emma Bennet
 
 site:
-  origin: https://acme.org
+  origin: https://zhengyishen0.github.io/zenixos.org
   view_transitions: true
 
 sitemap:
