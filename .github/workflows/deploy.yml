@@ -28,7 +28,7 @@ jobs:
         run: bun install -g nuekit
 
       - name: Build site
-        run: nue build --production
+        run: nue build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.dist/prod'
+          path: '.dist'
 
   deploy:
     environment:
