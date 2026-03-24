@@ -26,11 +26,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Nue.js
-        run: npm install -g nue
-
       - name: Build site
-        run: nue build --production
+        run: npx nue build --production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
