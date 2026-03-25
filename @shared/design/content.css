@@ -69,7 +69,7 @@
       font-family: ui-monospace, "SF Mono", monospace;
       border-radius: 4px;
       padding: .15em .35em;
-      font-size: .875em;
+      font-size: 0.875rem;
     }
   }
 
@@ -100,7 +100,7 @@
   small,
   figcaption {
     font-weight: 400;
-    font-size: .875em;
+    font-size: 0.875rem;
     color: var(--text-muted);
   }
 

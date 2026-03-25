@@ -45,6 +45,7 @@
 
   body {
     font-family: var(--font-sans);
+    font-size: 1.125rem;
     line-height: 1.6;
     background: var(--bg);
   }
@@ -57,7 +58,7 @@
 
   h1 { font-size: 2rem; margin-bottom: var(--m); }
   h2 { font-size: 1.5rem; margin-top: var(--l); color: var(--text-secondary); }
-  h3 { font-size: 1.17rem; color: var(--text-secondary); }
+  h3 { font-size: 1.125rem; font-weight: 600; color: var(--text-secondary); }
 
   p {
     color: var(--text-secondary);
@@ -87,7 +88,7 @@
     background: var(--bg-subtle);
     padding: 0.15em 0.4em;
     border-radius: 4px;
-    font-size: 0.9em;
+    font-size: 0.875rem;
     color: var(--text-primary);
   }
 

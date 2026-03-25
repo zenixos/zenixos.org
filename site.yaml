@@ -24,6 +24,7 @@ collections:
     include: [ blog/ ]
     skip: [ skip ]
     sort: date desc
+    navigation: true
 
 server:
   reload: true

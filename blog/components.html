@@ -2,3 +2,25 @@
 <pagehead>
   <pretty-date :date="date"/> • <span>{ author }</span>
 </pagehead>
+
+<pagefoot class="page-nav">
+  <script>
+    const posts = this.blog || []
+    const current = this.url
+    const idx = posts.findIndex(p => p.url === current)
+    this.prevPost = idx > 0 ? posts[idx - 1] : null
+    this.nextPost = idx >= 0 && idx < posts.length - 1 ? posts[idx + 1] : null
+  </script>
+  <a :if="prevPost" href="{ prevPost.url }" class="prev">
+    <span>← Previous</span>
+    <strong>{ prevPost.title }</strong>
+  </a>
+  <a :if="!prevPost" href="/blog/" class="prev">
+    <span>←</span>
+    <strong>All Essays</strong>
+  </a>
+  <a :if="nextPost" href="{ nextPost.url }" class="next">
+    <span>Next →</span>
+    <strong>{ nextPost.title }</strong>
+  </a>
+</pagefoot>

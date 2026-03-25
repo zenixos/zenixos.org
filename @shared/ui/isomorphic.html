@@ -18,12 +18,12 @@
 </time>
 
 <!-- Blog entries list component -->
-<table :is="blog-entries">
-  <tr :each="page in blog">
-    <td><pretty-date :date="page.date"/></td>
-    <td>
-      <a href="{ page.url }">{ page.title }</a>
+<div :is="blog-entries" class="blog-entries">
+  <a :each="page in blog" href="{ page.url }" class="blog-entry">
+    <time><pretty-date :date="page.date"/></time>
+    <div>
+      <strong>{ page.title }</strong>
       <p>{{ markdown(page.description) }}</p>
-    </td>
-  </tr>
-</table>
+    </div>
+  </a>
+</div>

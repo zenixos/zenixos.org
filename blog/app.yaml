@@ -1,2 +1,2 @@
 # Blog posts configuration
-include: [ pagehead ]
+include: [ pagehead, pagefoot ]
