@@ -5,7 +5,8 @@
   article {
     flex-direction: column;
     display: flex;
-    gap: var(--xl); /* section gaps */
+    gap: var(--xl);
+    /* section gaps */
   }
 
   h1 {
@@ -13,26 +14,27 @@
     color: var(--text-primary);
     font-weight: 500;
     letter-spacing: -0.02em;
-    
-    & + p, & + time + p {
+
+    &+p,
+    &+time+p {
       text-wrap: balance;
       text-align: left;
       color: var(--text-secondary);
     }
   }
-  
+
   /* Above the fold line - after first section */
-  article > section:first-of-type {
+  article>section:first-of-type {
     padding-bottom: var(--l);
     border-bottom: 1px solid var(--border-subtle);
     margin-bottom: var(--l);
-    
+
     p {
       text-align: left;
     }
   }
 
-  section > :is(h3, h4) {
+  section> :is(h3, h4) {
     margin-top: var(--l)
   }
 }
@@ -44,34 +46,66 @@
     text-align: center;
     padding: var(--xl) 0;
     margin-bottom: var(--l);
-    
+    position: relative;
+
+    /* Mountain background */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      background: url('/mountain_background.webp') center bottom / cover no-repeat;
+      opacity: 0;
+      z-index: 0;
+      pointer-events: none;
+      animation: bg-fade-in 1.5s ease-out 1.2s forwards;
+    }
+
     /* Handle Nue's div wrapping */
-    > div {
+    >div {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: var(--l);
-      
+      position: relative;
+      z-index: 1;
+
       &:last-child {
         margin-bottom: 0;
       }
     }
-    
+
     img {
       max-width: 550px;
       width: 100%;
       height: auto;
+    }
+
+    /* Hero logo with mountain background */
+    .hero-logo {
+      position: static;
+      display: inline-block;
+      max-width: 550px;
+      width: 100%;
+    }
+
+    .hero-logo .hero-text {
+      position: relative;
+      z-index: 1;
       animation: ink-reveal 1.2s ease-out forwards;
     }
-    
+
     p:has(img) {
       margin: 0;
       width: 100%;
       display: flex;
       justify-content: center;
     }
-    
+
     h1 {
       font-size: 1.5rem;
       font-weight: 400;
@@ -79,7 +113,7 @@
       margin: 0 auto var(--m);
       max-width: 600px;
     }
-    
+
     p {
       font-size: 1rem;
       color: var(--text-muted);
@@ -95,12 +129,24 @@
     opacity: 0;
     filter: blur(12px);
   }
+
   50% {
     opacity: 0.8;
     filter: blur(4px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
+  }
+}
+
+@keyframes bg-fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.05;
   }
 }
