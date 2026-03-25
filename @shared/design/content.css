@@ -93,7 +93,7 @@
   hr {
     border: none;
     border-top: 1px solid var(--border-subtle);
-    margin-block: var(--l);
+    margin-block: var(--m);
   }
 
   blockquote {

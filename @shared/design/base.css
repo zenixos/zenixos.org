@@ -28,9 +28,9 @@
     --link-hover: #fff;
 
     /* Typographic grid */
-    --m: 1.5rem;
-    --l: 3rem;
-    --xl: 4.5rem;
+    --m: 1rem;
+    --l: 2rem;
+    --xl: 3rem;
     --max-line-width: 45rem;
     
     /* Font */
@@ -63,9 +63,9 @@
   /* Mobile typography & spacing */
   @media (max-width: 600px) {
     :root {
-      --m: 1rem;
-      --l: 1.5rem;
-      --xl: 2rem;
+      --m: 0.75rem;
+      --l: 1.25rem;
+      --xl: 1.75rem;
     }
     
     body {
@@ -132,7 +132,7 @@
   hr {
     border: none;
     border-top: 1px solid var(--border-subtle);
-    margin: var(--l) 0;
+    margin: var(--m) 0;
   }
 
   /* Lists */
