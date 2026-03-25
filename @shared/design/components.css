@@ -86,5 +86,15 @@
       font-size: 1rem;
       text-align: left;
     }
+    
+    /* Mobile: stack time above title */
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 0.25em;
+      
+      time {
+        width: auto;
+      }
+    }
   }
 }
