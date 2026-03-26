@@ -8,7 +8,7 @@
 
 ---
 
-A new kind of mind arrived. *Now comes the world.*
+***A new kind of mind arrived. Now comes the world.***
 
 It thinks in text, forgets between breaths, and has never felt the passage of time. It has no body, no location, no persistent self. And yet — given the right structure — it reasons, it learns, it develops something that looks like expertise.
 
