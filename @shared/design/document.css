@@ -18,7 +18,6 @@
     &+p,
     &+time+p {
       text-wrap: balance;
-      text-align: left;
       color: var(--text-secondary);
     }
   }
@@ -37,9 +36,7 @@
     }
   }
 
-  article>section:first-of-type:not(:last-of-type) p {
-    text-align: left;
-  }
+  /* Removed text-align: left to maintain consistent justify throughout */
 
   section> :is(h3, h4) {
     margin-top: var(--l)
@@ -126,6 +123,7 @@
       color: var(--text-muted);
       max-width: 550px;
       margin: 0 auto;
+      text-align: center !important;
     }
   }
 

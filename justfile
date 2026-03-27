@@ -14,9 +14,9 @@ init:
 test:
     cd @shared/server && bun test
 
-# Deploy to Cloudflare Pages
+# Deploy to Cloudflare Pages (production)
 deploy: build
-    npx wrangler pages deploy .dist --project-name zenixos-org
+    npx wrangler pages deploy .dist --project-name zenixos-org --branch=main --commit-dirty=true
 
 # Git push and deploy
 ship message: 
