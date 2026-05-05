@@ -1,11 +1,12 @@
 meta:
   title_template: "%s | Zenix"
   description: OS for Intelligence
-  author: Zenix Team
+  author: Zhengyi Shen
   favicon: /favicon.png
+  og_image: /og-image.png
 
 site:
-  origin: https://www.zenixos.org
+  origin: https://zenixos.org
   view_transitions: true
   skip: [ archive, draft ]
 

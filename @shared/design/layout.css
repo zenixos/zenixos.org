@@ -130,5 +130,10 @@
     color: var(--text-muted);
     font-size: 0.875rem;
     box-sizing: border-box;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }
